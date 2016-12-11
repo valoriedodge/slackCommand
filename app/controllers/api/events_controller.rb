@@ -17,7 +17,7 @@ class API::EventsController < ApplicationController
     response = {
       "text": "You did it"
     }
-       render json: response, status: 200
+       render json: "You did it", status: 200
        p params
     #  else
     #    @event = Event.new(event_params)
