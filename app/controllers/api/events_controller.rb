@@ -15,7 +15,8 @@ class API::EventsController < ApplicationController
     #  registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
     #  if registered_application == nil
     mymessage = {
-        "text": params(:user_id),
+        "text": 'Content-Length',
+        "response_type": "in_channel",
         "attachments": [
             {
                 "text":"Partly cloudy today and tomorrow"
