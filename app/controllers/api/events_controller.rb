@@ -15,8 +15,12 @@ class API::EventsController < ApplicationController
     #  registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
     #  if registered_application == nil
     mymessage = {
-      user: => params.user_id,
-      text: params.text
+        "text": "It's 80 degrees right now.",
+        "attachments": [
+            {
+                "text":"Partly cloudy today and tomorrow"
+            }
+        ]
     }
     render json: mymessage, status: 200
     p params
