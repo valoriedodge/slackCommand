@@ -14,8 +14,11 @@ class API::EventsController < ApplicationController
    def create
     #  registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
     #  if registered_application == nil
-
-    render json: params, status: 200
+    mymessage = {
+      user: params.user_id
+      text: params.text
+    }
+    render json: mymessage, status: 200
     p params
     #  else
     #    @event = Event.new(event_params)
