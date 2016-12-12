@@ -1,23 +1,21 @@
 # This file is used by Rack-based servers to start the application.
 
 require ::File.expand_path('../config/environment', __FILE__)
-run Rails.application
+require ::File.expand_path('../slack-bot/tracker', __FILE__)
 
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+# $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'dotenv'
 Dotenv.load
 
-require 'slack-ruby-bot'
-require 'slack-bot/commands/calculate'
-require 'slack-bot/tracker'
-require 'web'
+# require 'slack-bot'
+# require 'web'
 
 Thread.abort_on_exception = true
 
 Thread.new do
   begin
-    SlackBot::Bot.run
+    Tracker.run
   rescue Exception => e
     STDERR.puts "ERROR: #{e}"
     STDERR.puts e.backtrace
@@ -25,4 +23,4 @@ Thread.new do
   end
 end
 
-run SlackBot::Web
+run Rails.application
