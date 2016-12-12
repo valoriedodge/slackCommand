@@ -28,8 +28,9 @@ source 'https://rubygems.org'
  gem 'dotenv'
 
  group :development, :test do
-   gem 'byebug'
-
-   gem 'spring'
-   gem 'rspec-rails'
+  gem 'byebug'
+  gem 'rake'
+  gem 'foreman'
+  gem 'spring'
+  gem 'rspec-rails'
  end
