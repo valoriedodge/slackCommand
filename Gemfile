@@ -23,6 +23,9 @@ source 'https://rubygems.org'
  gem 'pg'
  gem 'slack-ruby-bot'
  gem 'celluloid-io'
+ gem 'puma'
+ gem 'sinatra'
+ gem 'dotenv'
 
  group :development, :test do
    gem 'byebug'
