@@ -14,7 +14,7 @@ class API::EventsController < ApplicationController
    def create
     #  registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
     #  if registered_application == nil
-    username = request.env['POST']
+    username = request
     mymessage = {
         "text": username,
         "attachments": [
