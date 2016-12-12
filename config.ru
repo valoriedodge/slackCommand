@@ -25,4 +25,3 @@ Thread.new do
 end
 
 run Rails.application
-run SlackBot::MyServer
