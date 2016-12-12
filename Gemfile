@@ -21,6 +21,8 @@ source 'https://rubygems.org'
  gem 'figaro'
  gem 'pry'
  gem 'pg'
+ gem 'slack-ruby-bot'
+ gem 'celluloid-io'
 
  group :development, :test do
    gem 'byebug'
