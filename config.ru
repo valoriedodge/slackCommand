@@ -2,7 +2,7 @@
 
 require ::File.expand_path('../config/environment', __FILE__)
 require ::File.expand_path('../slack-bot/tracker', __FILE__)
-
+Rails.logger.info "***************hello**************************************************"
 # $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'dotenv'

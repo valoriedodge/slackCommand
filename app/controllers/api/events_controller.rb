@@ -14,7 +14,8 @@ class API::EventsController < ApplicationController
    def create
     #  registered_application = RegisteredApplication.find_by(url: request.env['HTTP_ORIGIN'])
     #  if registered_application == nil
-    # if params[:token] == TEpHGQVbeAMK8y93b34Tw40c
+    givenToken = params[:token]
+    if givenToken == TEpHGQVbeAMK8y93b34Tw40c
       username = params[:token]
       mymessage = {
           "text": username,
@@ -25,9 +26,9 @@ class API::EventsController < ApplicationController
           ]
       }
       render json: mymessage, status: 200
-    # else
-    #   render json: {error: "Token is invalid", status: 400}, status: 400
-    # end
+    else
+      render json: {error: "Token is invalid", status: 400}, status: 400
+    end
     #  else
     #    @event = Event.new(event_params)
     #    @event.registered_application = registered_application
