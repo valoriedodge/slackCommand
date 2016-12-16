@@ -16,7 +16,7 @@ class API::EventsController < ApplicationController
     #  if registered_application == nil
     givenToken = params[:token]
     if givenToken == TEpHGQVbeAMK8y93b34Tw40c
-      username = params[:token]
+      username = givenToken
       mymessage = {
           "text": username,
           "attachments": [
